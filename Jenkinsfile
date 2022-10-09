@@ -1,8 +1,10 @@
 pipeline{
-				label {
+	agent{
+		label {
 						node 'slave-1'
 						customWorkspace '/'
 						}
+	}
 		stages{
 				
 				stage('installing docker'){
