@@ -1,7 +1,7 @@
 pipeline{
 	agent{
 		label {
-						node 'slave-1'
+						label 'slave-1'
 						customWorkspace '/'
 						}
 	}
