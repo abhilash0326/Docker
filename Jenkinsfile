@@ -17,9 +17,9 @@ pipeline{
 										
 									}
 									steps{
-										sh "docker run --name container1 -itdp httpd 80:80 bash"
-										sh "docker run --name container2 -itdp httpd 80:90 bash"
-										sh "docker run --name container3 -itdp httpd 80:8080 bash"
+										sh "sudo docker run --name container1 -itdp httpd 80:80 bash"
+										sh "sudo docker run --name container2 -itdp httpd 80:90 bash"
+										sh "sudo docker run --name container3 -itdp httpd 80:8080 bash"
 									
 									}
 				
@@ -42,9 +42,9 @@ pipeline{
 				stage('deployment of index.html'){
 									
 									steps{
-										sh "docker cp /mnt/data/22Q1/index.html container1:/usr/local/apache2/htdocs/"
-										sh "docker cp /mnt/data/22Q2/index.html container2:/usr/local/apache2/htdocs/"
-										sh "docker cp /mnt/data/22Q3/index.html container3:/usr/local/apache2/htdocs/"
+										sh "sudo docker cp /mnt/data/22Q1/index.html container1:/usr/local/apache2/htdocs/"
+										sh "sudo docker cp /mnt/data/22Q2/index.html container2:/usr/local/apache2/htdocs/"
+										sh "sudo docker cp /mnt/data/22Q3/index.html container3:/usr/local/apache2/htdocs/"
 									
 									}
 											
