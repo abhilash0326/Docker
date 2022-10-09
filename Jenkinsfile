@@ -10,11 +10,11 @@ pipeline{
 				stage('installing docker'){
 									
 									steps{
-										dir ('/'){
+										
 										sh "sudo yum install docker -y"
 										sh "sudo systemctl start docker"
 										sh "sudo sleep 5"
-										}
+										
 									}
 									steps{
 										sh "docker run --name container1 -itdp httpd 80:80 bash"
