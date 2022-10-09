@@ -5,13 +5,13 @@ pipeline{
 						}
 		stages{
 				
-				stage ('installing docker'){
+				stage('installing docker'){
 									
 									steps{
 										dir ('/'){
-										sh "yum install docker -y"
-										sh "systemctl start docker"
-										sh "sleep 5"
+										sh "sudo yum install docker -y"
+										sh "sudo systemctl start docker"
+										sh "sudo sleep 5"
 										}
 									}
 									steps{
@@ -24,7 +24,7 @@ pipeline{
 											
 									
 				}
-				stage ('cloning git'){
+				stage('cloning git'){
 									
 									steps{
 											sh "mkdir /mt/data"
@@ -37,7 +37,7 @@ pipeline{
 											}
 									}
 				}
-				stage ('deployment of index.html'){
+				stage('deployment of index.html'){
 									
 									steps{
 										sh "docker cp /mnt/data/22Q1/index.html container1:/usr/local/apache2/htdocs/"
