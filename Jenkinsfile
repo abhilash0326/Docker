@@ -9,7 +9,7 @@ pipeline{
 									steps{
 											sh "mkdir /mt/data"
 											sh "chmod -R 777 /mnt/data"
-										dir (/mnt/data){
+										dir ('/mnt/data'){
 										sh "rm -rf *"
 										sh "git clone -b 22Q1 https://github.com/abhilash0326/Docker.git 22Q1"
 										sh "git clone -b 22Q2 https://github.com/abhilash0326/Docker.git 22Q2"
