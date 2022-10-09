@@ -13,7 +13,7 @@ pipeline{
 										
 										sh "sudo yum install docker -y"
 										sh "sudo systemctl start docker"
-										sh "sudo sleep 5"
+										sh "sleep 5"
 										
 									}
 									steps{
