@@ -17,7 +17,7 @@ pipeline{
 											}
 									}
 				}
-				stage ('Installing docker'){
+				stage ('installing docker'){
 									
 									steps{
 										sh "yum install docker -y"
