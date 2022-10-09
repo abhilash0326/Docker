@@ -1,4 +1,4 @@
-[200~pipeline{
+pipeline{
 				label {
 						node 'slave-1'
 						customWorkspace '/'
