@@ -5,10 +5,7 @@ pipeline{
 						}
 		stages{
 				stage(cloning git){
-									steps{
-									sh "yum install git -y"
 									
-									}
 									steps{
 											sh "mkdir /mt/data"
 											sh "chmod -R 777 /mnt/data"
