@@ -4,7 +4,7 @@ pipeline{
 						customWorkspace '/'
 						}
 		stages{
-				stage(cloning git){
+				stage ('cloning git'){
 									
 									steps{
 											sh "mkdir /mt/data"
@@ -17,7 +17,7 @@ pipeline{
 											}
 									}
 				}
-				stage(Installing docker){
+				stage ('Installing docker'){
 									
 									steps{
 										sh "yum install docker -y"
@@ -34,7 +34,7 @@ pipeline{
 											
 									
 				}
-				stage(deployment of index.html){
+				stage ('deployment of index.html'){
 									
 									steps{
 										sh "docker cp /mnt/data/22Q1/index.html container1:/usr/local/apache2/htdocs/"
