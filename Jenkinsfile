@@ -35,6 +35,7 @@ pipeline{
 											sh "chmod -R 777 /mnt/data"
 										dir ('/mnt/data'){
 										sh "rm -rf *"
+										sh "yum install git -y"
 										sh "git clone -b 22Q1 https://github.com/abhilash0326/Docker.git 22Q1"
 										sh "git clone -b 22Q2 https://github.com/abhilash0326/Docker.git 22Q2"
 										sh "git clone -b 22Q3 https://github.com/abhilash0326/Docker.git 22Q3"
