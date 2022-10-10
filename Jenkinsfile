@@ -19,9 +19,9 @@ pipeline{
 				}
 				stage('making containers'){
 									steps{
-										sh "sudo docker run --name container1 -itdp httpd 80:80 bash"
-										sh "sudo docker run --name container2 -itdp httpd 80:90 bash"
-										sh "sudo docker run --name container3 -itdp httpd 80:8080 bash"
+										sh "sudo docker run --name container1 -itdp httpd 80:80"
+										sh "sudo docker run --name container2 -itdp httpd 80:90"
+										sh "sudo docker run --name container3 -itdp httpd 80:8080"
 									
 									}
 				
