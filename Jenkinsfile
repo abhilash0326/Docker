@@ -2,7 +2,7 @@ pipeline{
 	agent{
 		label {
 						label 'slave-1'
-						customWorkspace '/'
+						customWorkspace '/data/docker'
 						}
 	}
 		stages{
@@ -16,6 +16,8 @@ pipeline{
 										sh "sleep 5"
 										
 									}
+				}
+				stage('making containers'){
 									steps{
 										sh "sudo docker run --name container1 -itdp httpd 80:80 bash"
 										sh "sudo docker run --name container2 -itdp httpd 80:90 bash"
@@ -29,7 +31,7 @@ pipeline{
 				stage('cloning git'){
 									
 									steps{
-											sh "mkdir /mt/data"
+											sh "mkdir /mnt/data"
 											sh "chmod -R 777 /mnt/data"
 										dir ('/mnt/data'){
 										sh "rm -rf *"
